@@ -1,8 +1,14 @@
 import React from 'react';
 
 import './login.css'
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login() {
+	const navigate= useNavigate()
+	function dashboard(){
+	navigate('/dashboard')
+	}
     return (
         <div className="container1">
 		<div className="forms-container1">
@@ -17,7 +23,7 @@ export default function Login() {
 						<i className="fas fa-lock"></i>
 						<input type="password" placeholder="Password" />
 					</div>
-					<input type="submit" value="Login" className="btn solid" />
+					<input type="button" value="Login" onClick={dashboard} className="btn solid" />
 					
 				</form>
 				<form action="#" className="sign-up-form">
@@ -34,7 +40,7 @@ export default function Login() {
 						<i className="fas fa-lock"></i>
 						<input type="password" placeholder="Password" />
 					</div>
-					<input type="submit" className="btn" value="Sign up" />
+					<input type="button" onClick={dashboard} className="btn" value="Sign up" />
 					
 				</form>
 			</div>

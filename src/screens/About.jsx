@@ -110,7 +110,7 @@ export default function About() {
     <h3 className="mt-5">Our History</h3>
     <div className="row align-items-center">
         <div className='col-md-6 col-sm-12'>
-            <img src={history} alt="" />
+            <img src={history} alt="" className='img-fluid'/>
         </div>
         <div className='col-md-6 col-sm-12'>
         <p>
@@ -197,9 +197,9 @@ export default function About() {
         <div className="container text-center text-md-left">
           <div className="row text-center text-md-left">
             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h5 className="text-uppercase mb-4 font-weight-bold text-header">AutoMechanica</h5>
+              <h5 className="text-uppercase mb-4 font-weight-bold text-header">AUTOSERVICE</h5>
               <p>
-                AutoMechanica’s mission is to enable premium quality care for your luxury car service at affordable pricing. We ensure real-time updates for complete car care needs with a fair and transparent pricing mechanism.
+                Autoservice mission is to enable premium quality care for your luxury car service at affordable pricing. We ensure real-time updates for complete car care needs with a fair and transparent pricing mechanism.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ export default function About() {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h5 className="text-uppercase mb-4 font-weight-bold text-header">Contact</h5>
               <p><i className="fas fa-home mr-3"></i>Unit no.4, Reality Warehousing Pvt. Ltd., Behind Reliance Smart, Wagholi, Pune, Maharashtra – 412207</p>
-              <p><i className="fas fa-envelope mr-3"></i> contact@automechanica.com</p>
+              <p><i className="fas fa-envelope mr-3"></i> contact@AUTOSERVICE.com</p>
               <p><i className="fas fa-phone mr-3"></i> +73 9797 9797</p>
             </div>
           </div>

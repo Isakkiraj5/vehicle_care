@@ -3,7 +3,12 @@ import './css/homescreen.css'
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.svg';
 import { useNavigate } from 'react-router-dom';
-
+import diagnostic from '../assets/img/Diagnostic.jpg'
+import Detailing from '../assets/img/Detailing.jpg'
+import engine from '../assets/img/engine.jpg'
+import brakes from '../assets/img/brake.jpg'
+import oillube from '../assets/img/oillube.jpg'
+import suspension from '../assets/img/suspension.jpg'
 export default function Home() {
   const navigate = useNavigate();
 
@@ -33,28 +38,28 @@ export default function Home() {
           technicians uses state-of-the-art equipment and the latest industry techniques to provide you with reliable
           and efficient service every time.
         </p>
-        <button className="contact">Contact us</button>
+        <button className="contact" onClick={navigation}>Login</button>
       </div>
       <div className="container choose-us">
         <h3 className="text-center mb-4">Why Choose Us</h3>
         <div className="row text-center">
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/car-diagnostic.svg" alt="Diagnostic" />
+              <img className="img-fluid" src={diagnostic} alt="Diagnostic" />
               <h5 className="my-2">Diagnostic</h5>
-              <p>If your car needs a mobile diagnostic check done at your home or office, let AutoMechanica come to you.</p>
+              <p>If your car needs a mobile diagnostic check done at your home or office, let AUTOSERVICE come to you.</p>
             </div>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/car-Dent_Paint.svg" alt="Dent & Paint" />
+              <img className="img-fluid" src={Detailing} alt="Dent & Paint" />
               <h5 className="my-2">Dent & Paint</h5>
-              <p>AutoMechanica specializes in car dent repair and car painting services for a range of models.</p>
+              <p>AUTOSERVICE specializes in car dent repair and car painting services for a range of models.</p>
             </div>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/Car-Brake.svg" alt="Brakes" />
+              <img className="img-fluid" src= {brakes} alt="Brakes" />
               <h5 className="my-2">Brakes</h5>
               <p>
                 The brake system consists of different parts that can be fixed individually. A detailed quote is
@@ -64,7 +69,7 @@ export default function Home() {
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/car-suspension.svg" alt="Suspension" />
+              <img className="img-fluid" src={suspension} alt="Suspension" />
               <h5 className="my-2">Suspension</h5>
               <p>
                 The suspension system of your vehicle protects you from bouncing up and down due to the bad road
@@ -74,20 +79,20 @@ export default function Home() {
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/Car-Oil_Lube.svg" alt="Oil Lube" />
+              <img className="img-fluid" src={oillube} alt="Oil Lube" />
               <h5 className="my-2">Oil Lube</h5>
               <p>
-                AutoMechanica proudly serves the Lube, Oil & Filter change needs of customers' vehicle performance
+                AUTOSERVICE proudly serves the Lube, Oil & Filter change needs of customers' vehicle performance
                 while extending the life of your vehicle.
               </p>
             </div>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
             <div className="choose-details">
-              <img className="img-fluid" src="./images/Car_-_Detailing.svg" alt="Detailing" />
+              <img className="img-fluid"  src={engine} alt="Detailing" />
               <h5 className="my-2">Detailing</h5>
               <p>
-                AutoMechanica offers professional car detail services at an affordable price. Our interior
+                AUTOSERVICE offers professional car detail services at an affordable price. Our interior
                 cleaning, detailing, and restoration services can help you recapture that new car look and
                 smell.
               </p>
@@ -221,9 +226,9 @@ export default function Home() {
         <div className="container text-center text-md-left">
           <div className="row text-center text-md-left">
             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h5 className="text-uppercase mb-4 font-weight-bold text-header">AutoMechanica</h5>
+              <h5 className="text-uppercase mb-4 font-weight-bold text-header">AUTOSERVICE</h5>
               <p>
-                AutoMechanica’s mission is to enable premium quality care for your luxury car service at affordable pricing. We ensure real-time updates for complete car care needs with a fair and transparent pricing mechanism.
+                Autoservice mission is to enable premium quality care for your luxury car service at affordable pricing. We ensure real-time updates for complete car care needs with a fair and transparent pricing mechanism.
               </p>
             </div>
 
@@ -249,7 +254,7 @@ export default function Home() {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h5 className="text-uppercase mb-4 font-weight-bold text-header">Contact</h5>
               <p><i className="fas fa-home mr-3"></i>Unit no.4, Reality Warehousing Pvt. Ltd., Behind Reliance Smart, Wagholi, Pune, Maharashtra – 412207</p>
-              <p><i className="fas fa-envelope mr-3"></i> contact@automechanica.com</p>
+              <p><i className="fas fa-envelope mr-3"></i> contact@AUTOSERVICE.com</p>
               <p><i className="fas fa-phone mr-3"></i> +73 9797 9797</p>
             </div>
           </div>
