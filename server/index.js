@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json())
 const url='mongodb+srv://isakkiraj:Esscooty%407300@cluster0.fdsuknk.mongodb.net/vehicle-care'
 const usermodel =require('./model/user')
-const port=process.env.port || 3000
+const port = process.env.PORT || 4000;
 mongoose.connect(url)
 app.post('/login',(req,res)=>{
     const {email,password}=req.body;
