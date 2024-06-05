@@ -1,16 +1,39 @@
 import React from 'react'
 import Navbar from './Navbar'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate, useParams } from 'react-router-dom'
 import logo from './assets/img/logo.svg';
 import './App.css'
+import axios from 'axios'
+import { useEffect,useState } from 'react';
 export default function Dashboard() {
+        const {userId}=useParams()
+    const [userdata, setUserdata] = useState(null);
+    const [error, setError] = useState(null);
+    useEffect(() => {
+        const fetchAppointment = async () => {
+          try {
+            const appointmentId = userId;
+            const baseUrl = 'https://server-1-rro0.onrender.com';
+           // console.log("URL",`${baseUrl}/api/user/${appointmentId}`);
+            const response =  await axios.get(`${baseUrl}/api/user/${appointmentId}`);
+           
+            setUserdata(response.data); // Assuming response.data is the appointment object
+          } catch (err) {
+            console.error('Error fetching appointment:', err.response.data);
+            setError('Error fetching appointment details');
+          } 
+        };
+      
+        fetchAppointment();
+      }, [userId]);
+
     const navigate=useNavigate()
     function home(){
-        navigate('/dashboard')
+        navigate(`/dashboard/${userId}`)
         console.log("name")
     }
     function appointment(){
-        navigate('/dashboard/appointment')
+        navigate(`/dashboard/${userId}/appointment`)
         console.log("name")
     }
   return (
@@ -36,7 +59,7 @@ export default function Dashboard() {
     </div>
     </div>
     <div className='col-11 px-0'>
-        <Navbar />
+        <Navbar data={userdata}/>
         <div className='scroll-data'>
         <Outlet />
         </div>

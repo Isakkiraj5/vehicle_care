@@ -12,6 +12,9 @@ import ContactUs from './screens/contact.jsx';
 import Dashboard from './Dashboard.jsx';
 import Appointment from './dashboard-screens/appointment-page.jsx';
 import Homescreen from './dashboard-screens/homescreen.jsx';
+import Vehicle from './dashboard-screens/vehicle-details.jsx';
+import ServiceHistory from './dashboard-screens/service-history.jsx';
+import Vehicleexpense from './dashboard-screens/vehicleexpenses.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,8 +26,11 @@ const router = createBrowserRouter(
       <Route path="login" element={<Layout />}>
         <Route index element={<Login />} />
       </Route>
-      <Route path="dashboard" element={<Dashboard />}>
+      <Route path="dashboard/:userId" element={<Dashboard />}>
+      <Route path='vehicle' element={<Vehicle />}></Route>
      <Route path='appointment' element={<Appointment />}></Route>
+     <Route path='servicehistory' element={<ServiceHistory />}></Route>
+     <Route path='vehicleexpenses' element={<Vehicleexpense />}></Route>
      <Route index element={<Homescreen />}></Route>
       </Route>
     </Route>

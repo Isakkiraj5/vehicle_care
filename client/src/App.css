@@ -166,3 +166,80 @@ form{
       width: 50%;
     }
   }
+  /* Add this CSS to your stylesheet */
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-label {
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkbox-input {
+    display: none;
+  }
+  
+  .checkbox-input:checked + .checkbox-label {
+    background-color: #f98c39;
+    color: #ffffff;
+  }
+  
+  .checkbox-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .checkbox-input:checked + .checkbox-label .checkbox-custom {
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-input:checked + .checkbox-label .checkbox-custom::after {
+    display: block;
+  }
+  
+  .checkbox-custom::after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .header {
+    background-color: #f98c39; /* Background color */
+    color: white; /* Text color */
+    padding: 15px; /* Padding */
+    text-align: center; /* Center the text */
+    border-radius: 5px 5px 0 0; /* Rounded corners at the top */
+    font-size: 24px; /* Font size */
+    margin-bottom: 20px; /* Space below the header */
+  }

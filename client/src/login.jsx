@@ -25,39 +25,39 @@ const Login = () => {
   });
 
   const handleSignInSubmit = (values) => {
-    // Log sign-in values to the console
-    console.log(values)
-    axios.post("http://localhost:3000/login", values)
-    .then((res) => {
-      console.log('Login Response:', res.data);
-      if (res.data === "success") {
-        console.log('Login successful. Redirecting to dashboard...');
-        dashboard();
-      } else {
-        setError(true)
-        console.log('Login failed:', res.data);
-        
-      }
-    })
-    .catch((error) => {
-      console.error('Login Error:', error);
-      // Handle error if necessary
-    });
-  
+    console.log(values);
+    axios.post("https://server-1-rro0.onrender.com/api/login", values)
+      .then((res) => {
+        console.log('Login Response:', res.data);
+        if (res.data.success) {
+          console.log('Login successful. Redirecting to dashboard...');
+          dashboard(res.data.userId); // Pass userId directly
+        } else {
+          setError(true);
+          console.log('Login failed:', res.data.message);
+        }
+      })
+      .catch((error) => {
+        console.error('Login Error:', error);
+      });
   };
+  
+  
+  const dashboard = (userId) => {
+    navigate(`/dashboard/${userId}`); 
+  };
+  
 
   const handleSignUpSubmit = (values) => {
   
     console.log('Sign Up Values:', values);
-    axios.post("http://localhost:3000/register",values)
+    axios.post("https://server-1-rro0.onrender.com/api/register",values)
     .then((res)=>console.log(res))
     setActive(false)
     
   };
 
-  const dashboard = () => {
-    navigate('/dashboard');
-  };
+
 
   return (
     <div className="container1">
